@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Loading the Bootstrap File -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../JS-Quiz/assets/css/style.css">
+
+    <title>JS-Quiz Challenge</title>
+</head>
+<body>
+
+        <div id="navbar">
+            <nav class="navbar navbar-dark bg-dark">
+                <a class="navbar-brand" href="../JS-Quiz/index.html">JS-Quiz</a> 
+                <a class="nav-link" href="#" onclick="loadHighScores()">Highscores</a>
+          </nav>
+        </div>
+        
+        
+        <div class="rounded container-fluid" id="mainBody" >
+             <div class= "row, text-center" id="description">
+                <h1>JS-Quiz Challenge</h1>
+                <p>Try to answer the following questions within the time limit. <br>Keep in mind that incorrect answers will penalize your scoretime by ten seconds</p>
+                <button class="btn btn-primary" id="startQuizGame" onclick="startQuizGame()"> Start Quiz</button>
+        </div>
+
+        <div class="invisible" id="quizHolder" >
+                <p class="text-center">Time Remaining : <span id="timerBox"></span></p>
+
+                <h2  class="text-center" id="title" > </h2>
+                <div id="choices" class="choices text-center"> </div>      
+        </div>
+
+        <div class="invisible" id="finishQuizGame">
+            <h2 class="text-center">Game Over !</h2>
+            <p class="text-center">Final score is <span id="totalScore" ></span></p>
+            <p class="text-center">Enter Intials: 
+                    <input type = "text" id="intials">
+                    <button class="btn btn-success" onclick="saveHighscore()" id="submit">Submit</button>
+                    <button class="btn btn-primary" onclick="loadHighScores()" id="highScoresBtn">Check High Scores</button>
+            </p>
+
+        </div>
+        <div id="rightWrong" class="invisible">
+        </div>
+
+        <script src="../JS-Quiz/assets/js/questions.js"></script>
+        <script src="../JS-Quiz/assets/js/script.js"></script>
+
+
+
+</body>
+</html>
