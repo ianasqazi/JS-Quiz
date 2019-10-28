@@ -12,18 +12,24 @@
 </head>
 <body>
 
+<!-- Top Navigation bar with logo image  -->
+
         <div id="navbar">
             <nav class="navbar navbar-dark bg-dark">
-                <a class="navbar-brand" href="../JS-Quiz/index.html">JS-Quiz</a> 
+                <a class="navbar-brand" href="../JS-Quiz/index.html">
+                        <img src="http://pluspng.com/img-png/logo-javascript-png-html-code-allows-to-embed-javascript-logo-in-your-website-587.png" alt="JavaScript Logo" class="image-fluid">
+                </a> 
+
                 <a class="nav-link" href="#" onclick="loadHighScores()">Highscores</a>
           </nav>
         </div>
         
-        
+<!-- Main Body Container -->
+
         <div class="rounded container-fluid" id="mainBody" >
              <div class= "row, text-center" id="description">
-                <h1>JS-Quiz Challenge</h1>
-                <p>Try to answer the following questions within the time limit. <br>Keep in mind that incorrect answers will penalize your scoretime by ten seconds</p>
+                <h1>Quiz Challenge</h1>
+                <p>Try to answer the following questions related to JavaScript within the time limit. <br>Keep in mind that incorrect answers will penalize your final score by ten seconds</p>
                 <button class="btn btn-primary" id="startQuizGame" onclick="startQuizGame()"> Start Quiz</button>
         </div>
 
@@ -34,18 +40,25 @@
                 <div id="choices" class="choices text-center"> </div>      
         </div>
 
-        <div class="invisible" id="finishQuizGame">
-            <h2 class="text-center">Game Over !</h2>
-            <p class="text-center">Final score is <span id="totalScore" ></span></p>
-            <p class="text-center">Enter Intials: 
-                    <input type = "text" id="intials">
-                    <button class="btn btn-success" onclick="saveHighscore()" id="submit">Submit</button>
-                    <button class="btn btn-primary" onclick="loadHighScores()" id="highScoresBtn">Check High Scores</button>
-            </p>
-
-        </div>
         <div id="rightWrong" class="invisible">
         </div>
+
+        <div class="invisible" id="finishQuizGame">
+            <h2 class="text-center jumbotron">Game Over !</h2>
+            <h4 class="text-center alert alert-success">Final score is <span id="totalScore" ></span></h4>
+            <br>
+            <p class="text-center">Enter Intials :  
+                    <input type = "text" id="intials" placeholder="2 chars max" maxlength="2">
+                    <br>
+                    <br>
+                    <!-- Below button onClick will save high score TO localStorage -->
+                    <button class="btn btn-success" onclick="saveHighscore()" id="submit">Submit</button> 
+                    <!-- Below button onClick will load high score FROM localStorage -->
+                    <button class="btn btn-primary" onclick="loadHighScores()" id="highScoresBtn">Check High Scores</button>
+            </p>
+        </div>
+
+<!-- Loading JS Script  -->
 
         <script src="../JS-Quiz/assets/js/questions.js"></script>
         <script src="../JS-Quiz/assets/js/script.js"></script>

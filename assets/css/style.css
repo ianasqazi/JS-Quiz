@@ -1,9 +1,31 @@
+/* Styling main Body */
+
 #mainBody{
-    border-style: solid;
-    border-color: grey;
     margin-bottom: 5px;
+    max-width: 80%;
+    max-height: 80%;
+    padding:30px;
 }
 
-#navbar{
-    color:white;
+/* Logo Max Height */
+
+img{
+    height: auto;
+    max-height: 50px;
+}
+
+/* Colours to match the JS logo  */
+
+.jumbotron{
+    background-color: #f7de1eb7;
+    color:#323330;
+   }
+
+.btn-primary{
+    background-color: #f7de1eb7;
+    color:#323330;
+}
+
+.nav-link{
+    color: #f7de1eb7;
 }
