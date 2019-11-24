@@ -138,6 +138,7 @@ function saveHighscore() {
 
       // saving object to localStorage
       window.localStorage.setItem("highscore", JSON.stringify(highscores));
+      loadHighScores();
 
     }
   }
